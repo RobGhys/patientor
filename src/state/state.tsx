@@ -4,6 +4,7 @@ import { Patient } from "../types";
 import { Action } from "./reducer";
 
 export type State = {
+  // string key, Patient value
   patients: { [id: string]: Patient };
 };
 
@@ -21,6 +22,7 @@ type StateProviderProps = {
   children: React.ReactElement;
 };
 
+// Make the state and dispatch functions available in all of the components
 export const StateProvider: React.FC<StateProviderProps> = ({
   reducer,
   children

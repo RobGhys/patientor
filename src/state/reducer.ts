@@ -11,6 +11,7 @@ export type Action =
       payload: Patient;
     };
 
+// State is a dictionnary
 export const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "SET_PATIENT_LIST":
